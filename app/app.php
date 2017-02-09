@@ -10,6 +10,12 @@
         array('twig.path'=>__DIR__.'/../views')
     );
 
+    $app->get('/', function() use ($app) {
+
+        return $app['twig']->render('create_tamagotchi.html.twig');
+
+    });
+
     $app->get('/main', function() use ($app) {
 
         return $app['twig']->render('main.html.twig');
