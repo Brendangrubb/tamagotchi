@@ -16,6 +16,24 @@
 
     });
 
+    $app->get('/feed', function() use ($app) {
+
+        return $app['twig']->render('feed.html.twig');
+
+    });
+
+    $app->get('/play', function() use ($app) {
+
+        return $app['twig']->render('play.html.twig');
+
+    });
+
+    $app->get('/sleep', function() use ($app) {
+
+        return $app['twig']->render('sleep.html.twig');
+
+    });
+
 
     return $app;
 ?>
